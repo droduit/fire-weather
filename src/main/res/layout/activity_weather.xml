@@ -94,11 +94,11 @@
                 app:cv_backgroundColorValue="@color/colorCircleStroke"
                 app:cv_fillColor="@color/colorBackground"
                 app:cv_strokeColorValue="@color/colorCircleStroke"
-                app:cv_subtitleSize="0dp"
-                app:cv_subtitleText=" "
+                app:cv_subtitleSize="@dimen/_12sdp"
+                app:cv_subtitleText="-"
                 app:cv_titleColor="@color/colorWhite"
                 app:cv_titleSize="@dimen/_50sdp"
-                app:cv_titleSubtitleSpace="0"
+                app:cv_titleSubtitleSpace="45"
                 app:cv_titleText="--" />
 
             <LinearLayout

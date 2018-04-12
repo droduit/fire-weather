@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Window;
 import android.view.WindowManager;
@@ -49,6 +50,7 @@ public class WeatherActivity extends AppCompatActivity {
 
         try {
             String weatherJsonString = getIntent().getStringExtra("EXTRA_DATA_WEATHER");
+            Log.d("Weather", weatherJsonString);
 
             GsonBuilder builder = new GsonBuilder();
             Gson gson = builder.create();
@@ -117,6 +119,7 @@ public class WeatherActivity extends AppCompatActivity {
 
         txtCity.setText(weatherObj.getName()+", "+weatherObj.getSys().getCountry());
         txtTemp.setTitleText(Weather.formatTemp(weatherObj.getMain().getTemp())+DEGREE_CHAR);
+        txtTemp.setSubtitleText(weatherObj.getWeather().get(0).getDescription());
         txtMin.setText(Weather.formatTemp(weatherObj.getMain().getTemp_min())+DEGREE_CHAR);
         txtMax.setText(Weather.formatTemp(weatherObj.getMain().getTemp_max())+DEGREE_CHAR);
         txtDate.setText(getTodayDateInStringFormat());
