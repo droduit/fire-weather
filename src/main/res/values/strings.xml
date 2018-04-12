@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="city_country">Earth</string>
+    <string name="wind">WIND</string>
+    <string name="humidity">HUMIDITY</string>
+    <string name="sunset">SUNSET</string>
+    <string name="sunrise">SUNRISE</string>
+</resources>
